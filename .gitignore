@@ -15,3 +15,5 @@ upload/*
 /local/php_interface/constants.php
 /cgi-bin
 /web.config
+
+test.php
