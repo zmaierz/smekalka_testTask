@@ -9,3 +9,14 @@ function dump($data, $all = false, $die = false) {
     }
     if ($die) die();
 }
+
+function addDaysToDate(?int $dateCount): string {
+    $today = date("y.m.d");
+    
+    $date = new DateTime($today);
+    $dayInterval = 'P' . $dateCount . 'D';
+    $date->add(new DateInterval($dayInterval));
+    $out = $date->format('d.m.Y');
+
+    return $out;
+}
